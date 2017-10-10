@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 // @flow
 
 import * as most from "most";
@@ -53,7 +55,7 @@ const downloadChapter = (name: string, chapter: Chapter) => {
   console.log(`Downloading chapter #${chapter.index}`);
 
   const chapterName = chapter.index.toString().padStart(4, "0");
-  const directory = path.resolve(__dirname, name, chapterName);
+  const directory = path.resolve(process.cwd(), name, chapterName);
 
   if (chapter.pages) {
     chapter.pages.forEach((page, pageIndex) => {
