@@ -1,0 +1,34 @@
+{
+  "name": "readmanga",
+  "version": "1.0.0",
+  "description": "A scrapper for readmanga.me",
+  "main": "readmanga.js",
+  "scripts": {
+    "start": "babel-node index.js",
+    "build": "babel index.js -o readmanga.js",
+    "prepublish": "npm run build"
+  },
+  "author": "kana-sama",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "download-file": "^0.1.5",
+    "most": "^1.7.2",
+    "most-request": "^2.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.56.0",
+    "prettier": "^1.7.4"
+  },
+  "bin": {
+    "readmanga": "./readmanga.js"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/kana-sama/readmanga.git"
+  }
+}
